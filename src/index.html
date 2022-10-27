@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <div class="container">
+      <form class="search-form" id="search-form">
+        <input
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <button class="search-btn" type="submit">
+          <svg class="icon" width="18px" height="18px">
+            <use href="../src/images/sprite.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <div class="gallery"></div>
+    <button type="button" class="load-more invisible">
+      <span class="btn-text">Load more</span>
+    </button>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>
