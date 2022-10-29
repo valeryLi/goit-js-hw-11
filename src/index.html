@@ -8,25 +8,17 @@
     <link rel="stylesheet" href="./sass/index.scss" />
   </head>
   <body>
-    <div class="container">
-      <form class="search-form" id="search-form">
-        <input
-          type="text"
-          name="searchQuery"
-          autocomplete="off"
-          placeholder="Search images..."
-        />
-        <button class="search-btn" type="submit">
-          <svg class="icon" width="18px" height="18px">
-            <use href="../src/images/sprite.svg#icon-search"></use>
-          </svg>
-        </button>
-      </form>
-    </div>
-    <div class="gallery"></div>
-    <button type="button" class="load-more invisible">
-      <span class="btn-text">Load more</span>
-    </button>
-    <script src="./index.js" type="module"></script>
+    <ul class="link-list">
+      <li>
+        <a href="./gallery-with-btn.html" class="link"
+          >Gallery with load more btn</a
+        >
+      </li>
+      <li>
+        <a href="./infiniti-scroll.html" class="link"
+          >Gallery with infinity scroll</a
+        >
+      </li>
+    </ul>
   </body>
 </html>

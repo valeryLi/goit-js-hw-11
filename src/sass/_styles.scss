@@ -30,10 +30,11 @@
   margin-right: auto;
 }
 
-.gallery img {
+.gallery img{
   width: 100%;
-  height: 70%;
+  height: 260px;
 }
+
 
 .photo-card {
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
@@ -86,3 +87,4 @@
 .invisible {
     display: none;
 }
+
