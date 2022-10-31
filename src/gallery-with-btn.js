@@ -77,6 +77,8 @@ async function onFormSubmit(event) {
     enableKeyboard: true,
     overlayOpacity: 0.8,
   });
+
+  refs.form.reset();
 }
 
 function createGalleryMarkup(data) {
@@ -119,6 +121,8 @@ function createGalleryMarkup(data) {
     )
     .join('');
 
+  refs.galleryItems.insertAdjacentHTML('beforeend', markup);
+
   let countPages = Math.ceil(totalPages / perPage);
   if (pageToFetch === countPages) {
     refs.loadMoreBtn.style.display = 'none';
@@ -127,7 +131,6 @@ function createGalleryMarkup(data) {
     );
   }
 
-  refs.galleryItems.insertAdjacentHTML('beforeend', markup);
   refs.loadMoreBtn.style.display = 'block';
   refs.loadMoreBtn.addEventListener('click', onBtnClick);
   pageToFetch += 1;
