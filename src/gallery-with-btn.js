@@ -57,6 +57,7 @@ async function onFormSubmit(event) {
 
   pageToFetch = 1;
   refs.galleryItems.innerHTML = '';
+  refs.loadMoreBtn.style.display = 'none';
   if (!query) {
     Notify.failure(
       'Sorry, there are no images matching your search query. Please try again.'
@@ -127,7 +128,7 @@ function createGalleryMarkup(data) {
   }
 
   refs.galleryItems.insertAdjacentHTML('beforeend', markup);
-  refs.loadMoreBtn.style.display = 'inline';
+  refs.loadMoreBtn.style.display = 'block';
   refs.loadMoreBtn.addEventListener('click', onBtnClick);
   pageToFetch += 1;
 }
